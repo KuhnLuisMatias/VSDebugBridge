@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable">
+
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+
+  <Commands package="guidVSDebugBridgePackage">
+    <Groups>
+      <Group guid="guidVSDebugBridgeCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS" />
+      </Group>
+    </Groups>
+    <Buttons>
+      <Button guid="guidVSDebugBridgeCmdSet" id="cmdidCaptureDebugState" priority="0x0100" type="Button">
+        <Parent guid="guidVSDebugBridgeCmdSet" id="MyMenuGroup" />
+        <Strings>
+          <ButtonText>Capture Debug State</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <KeyBindings>
+    <KeyBinding guid="guidVSDebugBridgeCmdSet" id="cmdidCaptureDebugState" editor="guidVSStd97" mod1="Control Shift" key1="D" />
+  </KeyBindings>
+
+  <Symbols>
+    <GuidSymbol name="guidVSDebugBridgePackage" value="{0E045F9B-EFAF-419F-BE7E-55E6994D8B94}" />
+    <GuidSymbol name="guidVSDebugBridgeCmdSet" value="{1FA3D4BF-D03D-41A0-9B31-05BCD41142D3}">
+      <IDSymbol name="MyMenuGroup" value="0x0001" />
+      <IDSymbol name="cmdidCaptureDebugState" value="0x0100" />
+    </GuidSymbol>
+  </Symbols>
+
+</CommandTable>
